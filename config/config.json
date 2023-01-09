@@ -1,0 +1,14 @@
+{
+  "development": {
+    "dbURI": "mongodb+srv://ines2022:Azerty123#@codinghub.uh8odf8.mongodb.net/?retryWrites=true&w=majority",
+    "dbNAME": "codinghub"
+  },
+  "test": {
+    "dbURI": "mongodb+srv://ines2022:Azerty123#@codinghub.uh8odf8.mongodb.net/?retryWrites=true&w=majority",
+    "dbNAME": "codinghub"
+  },
+  "production": {
+    "dbURI": "mongodb+srv://ines2022:Azerty123#@codinghub.uh8odf8.mongodb.net/?retryWrites=true&w=majority",
+    "dbNAME": "codinghub"
+  }
+}
