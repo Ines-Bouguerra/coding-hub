@@ -10,9 +10,9 @@ module.exports = {
         env: process.env.NODE_ENV || 'development',
     },
     db: {
-        uri: process.env.DB_URI,
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
         dbName: process.env.DB_NAME,
-
         logging: true,
     },
     winiston: {

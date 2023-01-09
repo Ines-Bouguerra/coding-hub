@@ -9,12 +9,16 @@ const Logger = require('../middleware/logger.js');
 
 const logger = new Logger();
 const app = express();
+const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
+
 app.set('config', config); // the system configrationsx
 app.use(bodyParser.json());
 app.use(require('method-override')());
 
 app.use(compression());
 app.use(cors());
+app.use(express.static('public'));
 const swagger = require('../utils/swagger');
 
 
@@ -23,6 +27,19 @@ process.on('SIGINT', () => {
     process.exit();
 });
 
+// connect to the database
+const username = encodeURIComponent(config.db.username);
+const password = encodeURIComponent(config.db.password);
+const dbName = encodeURIComponent(config.db.dbName);
+const dbURI = "mongodb+srv://" + `${username}:${password}@${dbName}.uh8odf8.mongodb.net/?retryWrites=true&w=majority`;
+
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        logger.log('connected to the database', 'info');
+    })
+    .catch((err) => {
+        logger.log(`error connecting to the database ${err}`, 'error');
+    });
 
 app.set('port', process.env.DEV_APP_PORT);
 app.use('/api/docs', swagger.router);

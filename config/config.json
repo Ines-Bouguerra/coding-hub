@@ -1,14 +1,17 @@
 {
   "development": {
-    "dbURI": "mongodb+srv://ines2022:Azerty123#@codinghub.uh8odf8.mongodb.net/?retryWrites=true&w=majority",
+    "dbUsername": "ines2022",
+    "dbPassword": "mongo2022",
     "dbNAME": "codinghub"
   },
   "test": {
-    "dbURI": "mongodb+srv://ines2022:Azerty123#@codinghub.uh8odf8.mongodb.net/?retryWrites=true&w=majority",
-    "dbNAME": "codinghub"
+    "dbUsername": "ines2022",
+    "dbPassword": "mongo2022",
+    "dbNAME": "codinghubTest"
   },
   "production": {
-    "dbURI": "mongodb+srv://ines2022:Azerty123#@codinghub.uh8odf8.mongodb.net/?retryWrites=true&w=majority",
-    "dbNAME": "codinghub"
+    "dbUsername": "ines2022",
+    "dbPassword": "mongo2022",
+    "dbNAME": "codinghubProd"
   }
 }
