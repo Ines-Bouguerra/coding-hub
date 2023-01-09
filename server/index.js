@@ -12,13 +12,15 @@ const app = express();
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
 
-app.set('config', config); // the system configrationsx
+app.set('config', config); // the system configrations
 app.use(bodyParser.json());
 app.use(require('method-override')());
 
 app.use(compression());
 app.use(cors());
 app.use(express.static('public'));
+app.use(express.json());
+
 const swagger = require('../utils/swagger');
 
 
@@ -31,7 +33,7 @@ process.on('SIGINT', () => {
 const username = encodeURIComponent(config.db.username);
 const password = encodeURIComponent(config.db.password);
 const dbName = encodeURIComponent(config.db.dbName);
-const dbURI = "mongodb+srv://" + `${username}:${password}@${dbName}.uh8odf8.mongodb.net/?retryWrites=true&w=majority`;
+const dbURI = "mongodb+srv://" + `${username}:${password}@${dbName}.uh8odf8.mongodb.net/coding-hub?retryWrites=true&w=majority`;
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {

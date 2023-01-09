@@ -9,3 +9,32 @@
 2023-01-09 10:55:54 info: the server started listining on port port 3000
 2023-01-09 11:32:37 info: stopping the server
 2023-01-09 11:53:09 info: the server started listining on port port 3000
+2023-01-09 16:13:52 info: the server started listining on port port 3000
+2023-01-09 16:13:53 info: connected to the database
+2023-01-09 16:19:46 info: stopping the server
+2023-01-09 16:19:51 info: the server started listining on port port 3000
+2023-01-09 16:19:51 info: connected to the database
+2023-01-09 17:18:38 info: stopping the server
+2023-01-09 17:18:47 info: the server started listining on port port 3000
+2023-01-09 17:19:00 info: stopping the server
+2023-01-09 17:19:04 info: the server started listining on port port 3000
+2023-01-09 17:19:23 info: stopping the server
+2023-01-09 17:19:26 info: the server started listining on port port 3000
+2023-01-09 17:19:27 info: connected to the database
+2023-01-09 17:20:51 info: a request has been made with the following uuid [899714e4-613b-4a06-8d3e-da45b5400420] /api/v1/register PostmanRuntime/7.30.0 {}
+2023-01-09 17:21:53 info: a request has been made with the following uuid [a8dc3529-6ce8-469a-9bb1-030759e3be67] /api/v1/register PostmanRuntime/7.30.0 {"email":"test@gamil.com","password":"test"}
+2023-01-09 17:21:54 info: a request has been made with the following uuid [9f4c2e0c-2e90-4525-9ec9-f40a032ad4d2] /api/v1/register PostmanRuntime/7.30.0 {"email":"test@gamil.com","password":"test"}
+2023-01-09 17:22:26 info: a request has been made with the following uuid [bda64993-1279-475c-b028-2e617958f280] /api/v1/register PostmanRuntime/7.30.0 {"email":"test@gamil.com","password":"test"}
+2023-01-09 17:22:27 info: a request has been made with the following uuid [a3223d35-39ec-41f2-8972-ff2c902a7bda] /api/v1/register PostmanRuntime/7.30.0 {"email":"test@gamil.com","password":"test"}
+2023-01-09 17:22:54 info: stopping the server
+2023-01-09 17:22:58 info: the server started listining on port port 3000
+2023-01-09 17:22:59 info: connected to the database
+2023-01-09 17:23:04 info: a request has been made with the following uuid [835e4903-aab5-430c-8a78-a16c1bc89986] /api/v1/register PostmanRuntime/7.30.0 {"email":"test@gamil.com","password":"test"}
+2023-01-09 17:24:57 info: stopping the server
+2023-01-09 17:25:05 info: the server started listining on port port 3000
+2023-01-09 17:25:05 info: connected to the database
+2023-01-09 17:25:12 info: a request has been made with the following uuid [316f0727-a772-46dd-8ffb-f7fa8c363553] /api/v1/register PostmanRuntime/7.30.0 {"email":"test@gamil.com","password":"test"}
+2023-01-09 17:25:36 info: stopping the server
+2023-01-09 17:25:41 info: the server started listining on port port 3000
+2023-01-09 17:25:42 info: connected to the database
+2023-01-09 17:25:47 info: a request has been made with the following uuid [5451fdf5-73ec-4284-a5f2-48ede97436ea] /api/v1/register PostmanRuntime/7.30.0 {"email":"test@gamil.com","password":"testtest"}
