@@ -9,8 +9,7 @@ const Logger = require('../middleware/logger.js');
 
 const logger = new Logger();
 const app = express();
-const mongoose = require('mongoose');
-mongoose.set('strictQuery', false);
+
 
 app.set('config', config); // the system configrations
 app.use(bodyParser.json());
@@ -30,18 +29,8 @@ process.on('SIGINT', () => {
 });
 
 // connect to the database
-const username = encodeURIComponent(config.db.username);
-const password = encodeURIComponent(config.db.password);
-const dbName = encodeURIComponent(config.db.dbName);
-const dbURI = "mongodb+srv://" + `${username}:${password}@${dbName}.uh8odf8.mongodb.net/coding-hub?retryWrites=true&w=majority`;
-
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        logger.log('connected to the database', 'info');
-    })
-    .catch((err) => {
-        logger.log(`error connecting to the database ${err}`, 'error');
-    });
+const connectToDatabase = require("../database");
+connectToDatabase();
 
 // cookies
 const cookieParser = require('cookie-parser');
