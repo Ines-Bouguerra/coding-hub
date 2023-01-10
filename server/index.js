@@ -43,6 +43,23 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         logger.log(`error connecting to the database ${err}`, 'error');
     });
 
+// cookies
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
+app.get('/set-cookies', (req, res) => {
+    // res.setHeader('Set-Cookie', 'newUser=true');
+    res.cookie('newUser', false);
+    res.cookie('isEmployee', true, { maxAge: 1000 * 60 * 60 * 24, httpOnly: true });
+    res.send('you got the cookies!');
+});
+
+app.get('/read-cookies', (req, res) => {
+    const cookies = req.cookies;
+    console.log(cookies.newUser);
+    res.json(cookies);
+});
+
 app.set('port', process.env.DEV_APP_PORT);
 app.use('/api/docs', swagger.router);
 
