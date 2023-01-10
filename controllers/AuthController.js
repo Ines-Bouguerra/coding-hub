@@ -63,7 +63,8 @@ module.exports.login = async (req, res) => {
       });
       res.status(200).json({ user: user._id });
     } catch (err) {
-        res.status(400).send({ errors: err.message });
+        const errors = handleErrors(err);
+        res.status(400).send({ errors });
     }
     console.log(email, password);
     res.send('user login');
