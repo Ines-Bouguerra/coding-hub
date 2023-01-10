@@ -69,3 +69,8 @@ module.exports.login = async (req, res) => {
     console.log(email, password);
     res.send('user login');
 }
+
+module.exports.logout = (req, res) => {
+    res.cookie('jwt', '', { maxAge: 1 });
+    requestHandler.sendSuccess(res, 'User Logged Out Successfully')();
+}
